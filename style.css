@@ -1,0 +1,33 @@
+.card{
+  position: relative;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+}
+
+.turkey{
+  background-image: url("Turkiya.jpg");
+}
+
+.dubai{
+  background-image: url("Dubai2.jpg");
+}
+
+.malaysia{
+  background-image: url("Malaziya2.jpg");
+}
+
+.overlay{
+  background: rgba(0,0,0,0.5);
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
