@@ -24,7 +24,14 @@
             background:rgba(11,18,32,.75); backdrop-filter: blur(10px); border-bottom:1px solid rgba(255,255,255,.08);
             padding:14px 16px; border-radius: 0 0 var(--radius) var(--radius); }
     .brand{ display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.3px; }
-    .logo{ width:50px; height:50px; border-radius:12px; background: linear-gradient(135deg, var(--acc), var(--acc2)); }
+    .logo{
+  width:45px;
+  height:45px;
+  object-fit:contain;
+  border-radius:10px;
+  background:none;
+  display:block;
+}
     nav{ display:flex; gap:14px; flex-wrap:wrap; }
     nav a{ opacity:.86; padding:8px 10px; border-radius:12px; }
     nav a:hover{ background:rgba(255,255,255,.06); opacity:1; }
