@@ -1,0 +1,84 @@
+.form{ display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
+    @media (max-width: 700px){ .form{ grid-template-columns: 1fr; } }
+    input, textarea{
+      width:100%; padding:12px 12px; border-radius:14px; border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.05); color:var(--text); outline:none;
+    }
+    textarea{ min-height:110px; resize:vertical; grid-column: 1 / -1; }
+    .form .btn{ grid-column: 1 / -1; cursor:pointer; }
+
+    footer{ margin-top:26px; opacity:.78; font-size:14px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+    .small{ font-size:13px; color:var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>We Teach Travel</div>
+      </div>
+      <nav>
+        <a href="#xizmatlar">Xizmatlar</a>
+        <a href="#turlar">Turlar</a>
+        <a href="#savol">Savol-javob</a>
+        <a href="#aloqa">Aloqa</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <div class="pill">✈️ Sayohatni birga rejalashtiramiz • Ishonchli xizmat</div>
+        <h1 class="title">Viza, chipta va tur — hammasi bitta joyda</h1>
+        <p class="muted">
+          Biz siz uchun eng qulay yo‘nalishlarni tanlaymiz: aviachipta, mehmonxona, viza hujjatlari va tayyor turlar.
+          24/7 maslahat.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="#aloqa">📩 Buyurtma qoldirish</a>
+          <a class="btn secondary" href="#turlar">🧭 Turlarni ko‘rish</a>
+        </div>
+        <p class="small" style="margin:12px 0 0;">✅ Tez javob • ✅ Halol narx • ✅ Kafolatli qo‘llab-quvvatlash</p>
+      </div>
+
+      <div class="card">
+        <h2 style="margin:0 0 10px;">Tezkor ma’lumot</h2>
+        <div class="grid" style="grid-template-columns:1fr; margin-top:0;">
+          <div class="kpi">
+            <div class="icon">🗺️</div>
+            <div><b>Yo‘nalishlar</b><div class="muted">Turkiya • Dubay • Malayziya • Misr • Yevropa</div></div>
+          </div>
+          <div class="kpi">
+            <div class="icon">🛂</div>
+            <div><b>Viza yordami</b><div class="muted">Hujjat tayyorlash + konsultatsiya</div></div>
+          </div>
+          <div class="kpi">
+            <div class="icon">🏨</div>
+            <div><b>Mehmonxona</b><div class="muted">Budjetdan premiumgacha</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="xizmatlar" class="section card">
+      <h2>Xizmatlar</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="tag">✈️ Aviachipta</div>
+          <b>Eng qulay reyslar</b>
+          <p class="muted">Narx/vaqt bo‘yicha eng yaxshi variantlarni topamiz.</p>
+        </div>
+        <div class="card">
+          <div class="tag">🛂 Viza</div>
+          <b>Hujjat va yo‘l-yo‘riq</b>
+          <p class="muted">Anketa, ro‘yxat, bank hujjatlari bo‘yicha yordam.</p>
+        </div>
+        <div class="card">
+          <div class="tag">🏝️ Tayyor tur</div>
+          <b>All-inclusive paketlar</b>
+          <p class="muted">Chipta + hotel + transfer + gid (kerak bo‘lsa).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="turlar
