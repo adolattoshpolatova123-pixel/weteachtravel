@@ -1,33 +1,101 @@
+/* RESET */
+*{ margin:0; padding:0; box-sizing:border-box; }
+
+body{
+  font-family: Arial, sans-serif;
+  background: #0b1220;
+  color: #fff;
+  padding: 24px;
+}
+
+/* Sarlavha (agar header bo'lsa) */
+h1,h2,h3{ font-weight: 700; }
+
+/* CARD umumiy */
 .card{
   position: relative;
-  height: 300px;
-  border-radius: 20px;
+  height: 280px;
+  border-radius: 22px;
   overflow: hidden;
+  margin: 18px 0;
+  border: 1px solid rgba(255,255,255,0.08);
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin-bottom: 20px;
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  transform: translateZ(0);
 }
 
-.turkey{
-  background-image: url("Turkiya.jpg");
+/* Har bir kartaga rasm + gradient (rasm ko‘rinishi uchun eng ishonchli usul) */
+.card.turkey{
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.65)),
+    url("Turkiya.jpg");
+}
+.card.dubai{
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.65)),
+    url("Dubai2.jpg");
+}
+.card.malaysia{
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.65)),
+    url("Malaziya2.jpg");
 }
 
-.dubai{
-  background-image: url("Dubai2.jpg");
-}
-
-.malaysia{
-  background-image: url("Malaziya2.jpg");
-}
-
+/* Overlay ichidagi kontent */
 .overlay{
-  background: rgba(0,0,0,0.5);
-  height: 100%;
-  width: 100%;
-  padding: 20px;
-  color: white;
+  position: absolute;
+  inset: 0;
+  padding: 22px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Matnlar */
+.overlay h3{
+  font-size: 26px;
+  letter-spacing: 0.2px;
+}
+
+.overlay p{
+  font-size: 16px;
+  opacity: 0.92;
+}
+
+.price{
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Tugma */
+.btn{
+  display: inline-block;
+  width: fit-content;
+  padding: 12px 18px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+.btn.primary{
+  background: rgba(120, 215, 255, 0.22);
+  backdrop-filter: blur(6px);
+  color: #eaf8ff;
+}
+
+.btn.primary:hover{
+  background: rgba(120, 215, 255, 0.32);
+}
+
+/* Mobilga mos */
+@media (max-width: 480px){
+  body{ padding: 14px; }
+  .card{ height: 260px; }
+  .overlay h3{ font-size: 22px; }
 }
