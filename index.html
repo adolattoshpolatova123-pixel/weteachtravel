@@ -4,248 +4,314 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>We Teach Travel</title>
-  <meta name="description" content="Sayohatni oson va ishonchli rejalashtiring: turlar, vizalar, chipta va mehmonxona." />
+  <meta name="description" content="Sayohatni oson va ishonchli rejalashtiring: inbound, outbound va ichki turlar." />
+
   <style>
     :root{
-      --bg:#0b1220; --card:rgba(255,255,255,.06); --stroke:rgba(255,255,255,.12);
-      --text:#e8eefc; --muted:rgba(232,238,252,.75); --acc:#3b82f6; --acc2:#22c55e;
+      --bg:#0b1220;
+      --card:rgba(255,255,255,.06);
+      --stroke:rgba(255,255,255,.12);
+      --text:#e8eefc;
+      --muted:rgba(232,238,252,.75);
+      --acc:#3b82f6;
+      --acc2:#22c55e;
       --radius:18px;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     }
-    *{ box-sizing:border-box; }
-    body{ margin:0; background: radial-gradient(900px 420px at 20% 0%, rgba(59,130,246,.25), transparent 55%),
-                         radial-gradient(900px 420px at 80% 0%, rgba(34,197,94,.18), transparent 55%),
-                         var(--bg);
-          color:var(--text); }
-    a{ color:inherit; text-decoration:none; }
-    .wrap{ max-width:1100px; margin:0 auto; padding:22px 16px 60px; }
-    header{ display:flex; align-items:center; justify-content:space-between; gap:12px; position:sticky; top:0;
-            background:rgba(11,18,32,.75); backdrop-filter: blur(10px); border-bottom:1px solid rgba(255,255,255,.08);
-            padding:14px 16px; border-radius: 0 0 var(--radius) var(--radius); }
-    .brand{ display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.3px; }
-    .logo{ width:34px; height:34px; border-radius:12px; background: linear-gradient(135deg, var(--acc), var(--acc2)); }
-    nav{ display:flex; gap:14px; flex-wrap:wrap; }
-    nav a{ opacity:.86; padding:8px 10px; border-radius:12px; }
-    nav a:hover{ background:rgba(255,255,255,.06); opacity:1; }
-
-    .hero{ display:grid; grid-template-columns: 1.25fr .75fr; gap:16px; margin-top:18px; }
-    @media (max-width: 900px){ .hero{ grid-template-columns: 1fr; } header{ border-radius:0; } }
-
-    .card{ background:var(--card); border:1px solid var(--stroke); border-radius:var(--radius); padding:18px; }
-    .title{ font-size:42px; line-height:1.05; margin:0 0 10px; }
-    @media (max-width: 520px){ .title{ font-size:34px; } }
-    .muted{ color:var(--muted); line-height:1.55; }
-    .cta{ display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
-    .btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px;
-          padding:11px 14px; border-radius:14px; font-weight:700; border:1px solid rgba(255,255,255,.14); }
-    .btn.primary{ background: linear-gradient(135deg, var(--acc), #60a5fa); border-color: transparent; }
-    .btn.secondary{ background: rgba(255,255,255,.06); }
-    .btn:hover{ transform: translateY(-1px); }
-    .pill{ display:inline-flex; gap:8px; align-items:center; padding:8px 10px; border-radius:999px;
-           border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.05); font-size:13px; opacity:.92; }
-
-    .grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:14px; margin-top:14px; }
-    @media (max-width: 900px){ .grid{ grid-template-columns: 1fr; } }
-    .kpi{ display:flex; gap:12px; align-items:flex-start; }
-    .icon{ width:38px; height:38px; border-radius:14px; background:rgba(59,130,246,.18); border:1px solid rgba(59,130,246,.25); display:grid; place-items:center; font-size:18px;}
-    .kpi b{ display:block; margin-bottom:4px; }
-
-    .section{ margin-top:18px; }
-    .section h2{ margin:0 0 10px; font-size:22px; }
-    .cards{ display:grid; grid-template-columns: repeat(3, 1fr); gap:14px; }
-    @media (max-width: 900px){ .cards{ grid-template-columns: 1fr; } }
-    .tag{ font-size:12px; padding:6px 9px; border-radius:999px; background:rgba(34,197,94,.12); border:1px solid rgba(34,197,94,.25); display:inline-block; margin-bottom:10px; }
-    .price{ font-size:26px; font-weight:900; margin:8px 0 6px; }
-    ul{ margin:10px 0 0; padding-left:18px; color:var(--muted); line-height:1.55; }
-
-.form{ display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
-    @media (max-width: 700px){ .form{ grid-template-columns: 1fr; } }
-    input, textarea{
-      width:100%; padding:12px 12px; border-radius:14px; border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.05); color:var(--text); outline:none;
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:
+        radial-gradient(900px 420px at 20% 0%, rgba(59,130,246,.25), transparent 55%),
+        radial-gradient(900px 420px at 80% 0%, rgba(34,197,94,.18), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
     }
-    textarea{ min-height:110px; resize:vertical; grid-column: 1 / -1; }
-    .form .btn{ grid-column: 1 / -1; cursor:pointer; }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1100px;margin:0 auto;padding:22px 16px 70px}
+    header{
+      position:sticky;top:0;z-index:50;
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      background:rgba(11,18,32,.75);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+      padding:14px 16px;
+      border-radius:0 0 var(--radius) var(--radius);
+    }
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+    /* LOGO (rasm) */
+    .logo{
+      width:44px;
+      height:44px;
+      border-radius:12px;
+      object-fit:cover;
+      background:transparent;
+      display:block;
+      flex:0 0 auto;
+      border:1px solid rgba(255,255,255,.10);
+    }
+    nav{display:flex;gap:10px;flex-wrap:wrap}
+    nav a{
+      opacity:.9;
+      padding:8px 10px;
+      border-radius:12px;
+      border:1px solid transparent;
+    }
+    nav a:hover{
+      background:rgba(255,255,255,.06);
+      border-color:rgba(255,255,255,.10);
+      opacity:1;
+    }
 
-    footer{ margin-top:26px; opacity:.78; font-size:14px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
-    .small{ font-size:13px; color:var(--muted); }
+    .hero{display:grid;grid-template-columns:1.25fr .75fr;gap:16px;margin-top:18px}
+    @media (max-width: 900px){ .hero{grid-template-columns:1fr} header{border-radius:0} }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--stroke);
+      border-radius:var(--radius);
+      padding:18px;
+    }
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 10px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.04);
+      color:var(--muted);
+      font-size:14px;
+    }
+    .title{font-size:44px;line-height:1.05;margin:10px 0}
+    @media (max-width:520px){ .title{font-size:34px} }
+    .muted{color:var(--muted);line-height:1.6}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:11px 14px;border-radius:14px;
+      font-weight:700;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.06);
+      cursor:pointer;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{
+      background:linear-gradient(135deg,var(--acc),#60a5fa);
+      border-color:transparent;
+      color:#071028;
+    }
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+    @media (max-width:900px){ .grid3{grid-template-columns:1fr} }
+    .kpi{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .kpi span{font-size:13px;color:var(--muted)}
+    .sec{margin-top:18px}
+    .sec h2{margin:0 0 10px;font-size:22px}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:900px){ .row{grid-template-columns:1fr} }
+    .tag{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:6px 10px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+
+background:rgba(255,255,255,.04);
+      font-size:13px;color:var(--muted);
+      margin-bottom:8px;
+    }
+    .small{font-size:13px;color:var(--muted)}
+    .list{margin:10px 0 0;padding-left:18px;color:var(--muted);line-height:1.7}
+    footer{
+      margin-top:26px;opacity:.78;font-size:14px;
+      display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px
+    }
+    input,textarea{
+      width:100%;padding:12px;border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.05);
+      color:var(--text);outline:none;
+    }
+    textarea{min-height:110px;resize:vertical}
+    .form .btn{width:100%;justify-content:center}
   </style>
 </head>
+
 <body>
   <div class="wrap">
+
     <header>
       <div class="brand">
-        <img src="photo_2026-02-28_19-37-15.jpg" style="width:45px;height:45px;object-fit:contain;">
+        <!-- ✅ LOGO: bu yerga repo’dagi rasm nomini yozing -->
+        <img class="logo" src="photo_2026-02-28_19-37-15.jpg" alt="We Teach Travel logo">
         <div>We Teach Travel</div>
       </div>
+
       <nav>
         <a href="#xizmatlar">Xizmatlar</a>
-        <a href="#turlar">Turlar</a>
-        <a href="#savol">Savol-javob</a>
+        <a href="#yonalish">3 ta yo‘nalish</a>
+        <a href="#narxlar">Narxlar</a>
+        <a href="#bizhaqimizda">Biz haqimizda</a>
         <a href="#aloqa">Aloqa</a>
       </nav>
     </header>
 
-    <section class="hero">
-      <section id="services" class="section card">
-  <h2 style="margin:0 0 10px;">3 ta yo‘nalish</h2>
-  <p class="muted" style="margin-top:0;">Biz inbound, outbound va ichki turlar bo‘yicha xizmat ko‘rsatamiz.</p>
-
-  <div class="svc-grid">
-      <div class="svc-tag">🟩 Priyom (Incoming)</div>
-      <h3 style="margin:8px 0;">Chet elliklarni O‘zbekistonga qabul qilish</h3>
-      <p class="muted">Airport pickup, hotel, gid, Silk Road маршрути: Tashkent–Samarkand–Bukhara–Khiva.</p>
-      <a class="btn primary" href="#aloqa">So‘rov yuborish</a>
-    </div>
-      <div class="svc-tag">🟦 Otoravka (Outgoing)</div>
-      <h3 style="margin:8px 0;">O‘zbekistondan chet elga tur</h3>
-      <p class="muted">Turkiya, Dubay, Malayziya va boshqa yo‘nalishlar: chipta + hotel + tur paket.</p>
-      <a class="btn primary" href="#aloqa">Narx so‘rash</a>
-    </div>
-        <div class="svc card">
-  <div class="svc-tag">🟩 Kirish turizmi</div>
-  <h3>Chet elliklarni O‘zbekistonga qabul qilish</h3>
-  <p class="muted">
-    Aeroport kutib olish, mehmonxona, gid xizmati va
-    Tashkent–Samarqand–Buxoro–Xiva yo‘nalishlari.
-  </p>
-  <a class="btn primary" href="#aloqa">So‘rov yuborish</a>
-</div>
-
-<div class="svc card">
-  <div class="svc-tag">🟦 Chiqish turizmi</div>
-  <h3>O‘zbekistondan chet elga sayohat</h3>
-  <p class="muted">
-    Turkiya, Dubay, Malayziya va boshqa yo‘nalishlar:
-    chipta + mehmonxona + tur paket.
-  </p>
-  <a class="btn primary" href="#aloqa">Narx so‘rash</a>
-</div>
-
-<div class="svc card">
-  <div class="svc-tag">🟩 Kirish turizmi</div>
-  <h3>Chet elliklarni O‘zbekistonga qabul qilish</h3>
-  <p class="muted">
-    Aeroport kutib olish, mehmonxona, gid xizmati va
-    Tashkent–Samarqand–Buxoro–Xiva yo‘nalishlari.
-  </p>
-  <a class="btn primary" href="#aloqa">So‘rov yuborish</a>
-</div>
-<div class="svc card">
-  <div class="svc-tag">🟩 Kirish turizmi</div>
-  <h3>Chet elliklarni O‘zbekistonga qabul qilish</h3>
-  <p class="muted">
-    Aeroport kutib olish, mehmonxona, gid xizmati va
-    Tashkent–Samarqand–Buxoro–Xiva yo‘nalishlari.
-  </p>
-  <a class="btn primary" href="#aloqa">So‘rov yuborish</a>
-</div>
-
-<div class="svc card">
-  <div class="svc-tag">🟦 Chiqish turizmi</div>
-  <h3>O‘zbekistondan chet elga sayohat</h3>
-  <p class="muted">
-    Turkiya, Dubay, Malayziya va boshqa yo‘nalishlar:
-    chipta + mehmonxona + tur paket.
-  </p>
-  <a class="btn primary" href="#aloqa">Narx so‘rash</a>
-</div>
-
-<div class="svc card">
-  <div class="svc-tag">🟨 Ichki turizm</div>
-  <h3>O‘zbekiston ichida turlar</h3>
-  <p class="muted">
-    Samarqand, Buxoro, Xiva, Farg‘ona: 1–3 kunlik
-    sayohatlar, transport va gid xizmati.
-  </p>
-  <a class="btn primary" href="#aloqa">Bron qilish</a>
-</div>
-<div class="svc card">
-  <div class="svc-tag">🟦 Chiqish turizmi</div>
-  <h3>O‘zbekistondan chet elga sayohat</h3>
-  <p class="muted">
-    Turkiya, Dubay, Malayziya va boshqa yo‘nalishlar:
-    chipta + mehmonxona + tur paket.
-  </p>
-  <a class="btn primary" href="#aloqa">Narx so‘rash</a>
-</div>
-
-<div class="svc card">
-  <div class="svc-tag">🟨 Ichki turizm</div>
-  <h3>O‘zbekiston ichida turlar</h3>
-  <p class="muted">
-    Samarqand, Buxoro, Xiva, Farg‘ona: 1–3 kunlik
-    sayohatlar, transport va gid xizmati.
-  </p>
-  <a class="btn primary" href="#aloqa">Bron qilish</a>
-</div>
-  <div class="svc-tag">🟨 Ichki turizm</div>
-  <h3>O‘zbekiston ichida turlar</h3>
-  <p class="muted">
-    Samarqand, Buxoro, Xiva, Farg‘ona: 1–3 kunlik
-    sayohatlar, transport va gid xizmati.
-  </p>
-  <a class="btn primary" href="#aloqa">Bron qilish</a>
-</div>
-      <div class="svc-tag">🟨 Vnutrenniy (Domestic)</div>
-      <h3 style="margin:8px 0;">O‘zbekiston ichida turlar</h3>
-      <p class="muted">Samarqand, Buxoro, Xiva, Farg‘ona: 1–3 kunlik sayohatlar, transport + gid.</p>
-      <a class="btn primary" href="#aloqa">Bron qilish</a>
-    </div>
-  </div>
-</section>
+    <section class="hero" id="home">
       <div class="card">
         <div class="pill">✈️ Sayohatni birga rejalashtiramiz • Ishonchli xizmat</div>
         <h1 class="title">Viza, chipta va tur — hammasi bitta joyda</h1>
         <p class="muted">
-          Biz siz uchun eng qulay yo‘nalishlarni tanlaymiz: aviachipta, mehmonxona, viza hujjatlari va tayyor turlar.
+          Biz siz uchun eng qulay yo‘nalishlarni tanlaymiz: aviachiptalar, mehmonxona, viza hujjatlari va tayyor turlar.
           24/7 maslahat.
         </p>
+
         <div class="cta">
           <a class="btn primary" href="#aloqa">📩 Buyurtma qoldirish</a>
-          <a class="btn secondary" href="#turlar">🧭 Turlarni ko‘rish</a>
+          <a class="btn" href="#yonalish">🧭 Yo‘nalishlarni ko‘rish</a>
         </div>
-        <p class="small" style="margin:12px 0 0;">✅ Tez javob • ✅ Halol narx • ✅ Kafolatli qo‘llab-quvvatlash</p>
+
+        <div class="kpi">
+          <span>✅ Tez javob</span>
+          <span>✅ Halol narx</span>
+          <span>✅ Kafolatli qo‘llab-quvvatlash</span>
+        </div>
       </div>
 
       <div class="card">
-        <h2 style="margin:0 0 10px;">Tezkor ma’lumot</h2>
-        <div class="grid" style="grid-template-columns:1fr; margin-top:0;">
-          <div class="kpi">
-            <div class="icon">🗺️</div>
-            <div><b>Yo‘nalishlar</b><div class="muted">Turkiya • Dubay • Malayziya • Misr • Yevropa</div></div>
-          </div>
-          <div class="kpi">
-            <div class="icon">🛂</div>
-            <div><b>Viza yordami</b><div class="muted">Hujjat tayyorlash + konsultatsiya</div></div>
-          </div>
-          <div class="kpi">
-            <div class="icon">🏨</div>
-            <div><b>Mehmonxona</b><div class="muted">Budjetdan premiumgacha</div></div>
-          </div>
-        </div>
+        <h2 style="margin:0 0 10px">Tezkor ma’lumot</h2>
+        <div class="small">🧾 Xizmatlar: Inbound / Outbound / Ichki</div>
+        <div class="small" style="margin-top:8px">📌 Ish vaqti: 09:00–21:00 (har kuni)</div>
+        <div class="small" style="margin-top:8px">📞 Call center: +998 90 000 00 00</div>
+        <div class="small" style="margin-top:8px">💬 Telegram: @weteachtravel</div>
       </div>
     </section>
 
-    <section id="xizmatlar" class="section card">
+    <section class="sec" id="xizmatlar">
       <h2>Xizmatlar</h2>
-      <div class="cards">
+      <div class="grid3">
         <div class="card">
           <div class="tag">✈️ Aviachipta</div>
-          <b>Eng qulay reyslar</b>
+          <div style="font-weight:800">Eng qulay reyslar</div>
           <p class="muted">Narx/vaqt bo‘yicha eng yaxshi variantlarni topamiz.</p>
         </div>
         <div class="card">
           <div class="tag">🛂 Viza</div>
-          <b>Hujjat va yo‘l-yo‘riq</b>
-          <p class="muted">Anketa, ro‘yxat, bank hujjatlari bo‘yicha yordam.</p>
+          <div style="font-weight:800">Hujjat va yo‘l-yo‘riq</div>
+          <p class="muted">Anketa, ro‘yxat va hujjatlar bo‘yicha yordam.</p>
         </div>
         <div class="card">
-          <div class="tag">🏝️ Tayyor tur</div>
-          <b>All-inclusive paketlar</b>
+          <div class="tag">🏨 Turlar</div>
+          <div style="font-weight:800">Paketlar</div>
           <p class="muted">Chipta + hotel + transfer + gid (kerak bo‘lsa).</p>
         </div>
       </div>
     </section>
 
-    <section id="turlar
+    <section class="sec" id="yonalish">
+      <h2>3 ta yo‘nalish</h2>
+      <p class="muted" style="margin-top:0">
+        Biz inbound, outbound va ichki turlar bo‘yicha xizmat ko‘rsatamiz.
+      </p>
+
+      <div class="row">
+        <div class="card">
+          <div class="tag">🟩 Priyom (Incoming)</div>
+          <div style="font-weight:900;font-size:18px">Chet elliklarni O‘zbekistonga qabul qilish</div>
+          <p class="muted">
+            Airport pickup, hotel, gid, Silk Road marshruti: Toshkent–Samarqand–Buxoro–Xiva.
+          </p>
+          <a class="btn primary" href="#aloqa">So‘rov yuborish</a>
+        </div>
+
+<div class="card">
+          <div class="tag">🟦 Otoravka (Outgoing)</div>
+          <div style="font-weight:900;font-size:18px">O‘zbekistondan chet elga tur</div>
+          <p class="muted">
+            Turkiya, Dubay, Malayziya va boshqa yo‘nalishlar: chipta + hotel + tur paket.
+          </p>
+          <a class="btn primary" href="#aloqa">Narx so‘rash</a>
+        </div>
+
+        <div class="card">
+          <div class="tag">🟨 Ichki (Domestic)</div>
+          <div style="font-weight:900;font-size:18px">O‘zbekiston ichida turlar</div>
+          <p class="muted">
+            Samarqand, Buxoro, Xiva, Farg‘ona: 1–3 kunlik sayohatlar, transport + gid.
+          </p>
+          <a class="btn primary" href="#aloqa">Bron qilish</a>
+        </div>
+
+        <div class="card">
+          <div class="tag">ℹ️ Eslatma</div>
+          <p class="muted" style="margin:0">
+            “Priyom / Otoravka / Ichki” so‘zlari bir xil tilda turishi uchun matnni shu joydan boshqarib yozing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="narxlar">
+      <h2>Narxlar</h2>
+      <div class="card">
+        <p class="muted" style="margin:0">
+          Narxlar yo‘nalish, sana va xizmat paketiga qarab o‘zgaradi. Quyida namuna ko‘rinish:
+        </p>
+        <ul class="list">
+          <li>Ichki tur (1 kun) — <b>kelishiladi</b></li>
+          <li>Ichki tur (2–3 kun) — <b>kelishiladi</b></li>
+          <li>Outbound paket — <b>kelishiladi</b></li>
+          <li>Inbound (mehmonlar qabul) — <b>kelishiladi</b></li>
+        </ul>
+        <p class="small">Aniq narx uchun “Aloqa” bo‘limida so‘rov qoldiring.</p>
+      </div>
+    </section>
+
+    <section class="sec" id="bizhaqimizda">
+      <h2>Biz haqimizda</h2>
+      <div class="card">
+        <p class="muted" style="margin:0">
+          We Teach Travel — sayohatni qulay va ishonchli qilish uchun ishlaydi.
+          Biz hujjat, chipta, hotel va tur paketlarini bir joyda tashkil qilamiz.
+        </p>
+      </div>
+    </section>
+
+    <section class="sec" id="aloqa">
+      <h2>Aloqa</h2>
+      <div class="row">
+        <div class="card">
+          <div style="font-weight:900">Call Center</div>
+          <p class="muted" style="margin-top:8px; margin-bottom:0">
+            📞 +998 90 000 00 00 <br>
+            📞 +998 91 000 00 00 <br>
+            💬 Telegram: @weteachtravel
+          </p>
+          <p class="small" style="margin-top:10px">Manzil: Toshkent, O‘zbekiston</p>
+        </div>
+
+        <div class="card form">
+          <div style="font-weight:900">So‘rov qoldiring</div>
+          <p class="small">Bu forma demo. Xohlasa keyin Telegram/WhatsApp link qilib beramiz.</p>
+          <div style="margin-top:10px">
+            <input placeholder="Ism" />
+          </div>
+          <div style="margin-top:10px">
+            <input placeholder="Telefon" />
+          </div>
+          <div style="margin-top:10px">
+            <textarea placeholder="Qaysi yo‘nalish? (Priyom / Otoravka / Ichki) va sanalar..."></textarea>
+          </div>
+          <div style="margin-top:10px">
+            <button class="btn primary" type="button">Yuborish</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> We Teach Travel</div>
+      <div class="small">GitHub Pages’da ishlaydi • index.html</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
