@@ -167,3 +167,49 @@ h1,h2,h3{ font-weight: 700; }
   position: relative;
   z-index: 2;
 }
+.services {
+  display: flex;
+  gap: 20px;
+}
+
+.service-card {
+  width: 300px;
+  height: 200px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Qoramtir overlay (yozuv yaxshi ko‘rinishi uchun) */
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.service-card h3 {
+  position: relative;
+  z-index: 2;
+}
+
+/* Rasmlar */
+.avia {
+  background-image: url("Aviachipta.jpg");
+}
+
+.visa {
+  background-image: url("Visa.jpg");
+}
+
+.turlar {
+  background-image: url("Turlar.jpg");
+}
