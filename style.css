@@ -134,3 +134,19 @@ h1,h2,h3{ font-weight: 700; }
 .card.incoming{ background-image: url("Buxoro.jpg"); }
 .card.outgoing{ background-image: url("Parij.jpg"); }
 .card.domestic{ background-image: url("Xiva.jpg"); }
+/* ===== RASM CHIQISHI UCHUN 100% FIX ===== */
+
+.card{
+  position: relative;
+  overflow: hidden;
+
+  /* rasm sozlamalari */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 3 ta card */
+.card.incoming{ background-image: url("buxoro.jpg"); }
+.card.outgoing{ background-image: url("parij.jpg"); }
+.card.domestic{ background-image: url("xiva.jpg"); }
