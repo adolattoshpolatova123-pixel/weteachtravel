@@ -139,3 +139,6 @@ h1,h2,h3{ font-weight: 700; }
 .card.incoming { background-position: center 45% !important; }
 .card.outgoing { background-position: center 55% !important; }
 .card.domestic { background-position: center 50% !important; }
+.card{
+  background-size: 100% auto !important;
+}
