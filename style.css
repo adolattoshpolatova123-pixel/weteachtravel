@@ -341,3 +341,8 @@ h1,h2,h3{ font-weight: 700; }
   background:#4db8ff;
   color:#000;
 }
+body{
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+  font-weight: 600;
+}
