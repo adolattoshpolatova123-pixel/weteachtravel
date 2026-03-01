@@ -462,3 +462,25 @@ document.addEventListener("DOMContentLoaded", () => {
   changeLanguage(savedLang);
 });
 </script>
+<script>
+function changeLanguage(lang) {
+  localStorage.setItem("lang", lang);
+
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    const value = translations?.[lang]?.[key];
+
+    if (value !== undefined) {
+      el.innerText = value;
+    } else {
+      // topilmagan keylarni ko‘rsatib turadi (DevTools Console’da)
+      console.warn("Missing translation:", lang, key);
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("lang") || "uz";
+  changeLanguage(savedLang);
+});
+</script>
