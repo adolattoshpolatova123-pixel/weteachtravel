@@ -421,3 +421,44 @@ Viza, chipta va tur — hammasi bitta joyda
   </script>
 </body>
 </html>
+<script>
+const translations = {
+  uz: {
+    services_title: "Xizmatlar",
+    service_avia_tag: "✈️ Aviachiptа",
+    service_avia_title: "Eng qulay reyslar",
+    service_avia_desc: "Narx/vaqt bo‘yicha eng yaxshi variantlar",
+    service_visa_tag: "🛂 Viza",
+    service_visa_title: "Hujjat va yo‘l-yo‘riq",
+    service_visa_desc: "Anketa, ro‘yxat va hujjatlar bo‘yicha yordam",
+    service_tour_tag: "🏨 Turlar",
+    service_tour_title: "Paketlar",
+    service_tour_desc: "Chipta + hotel + transfer + gid (kerak bo‘lsa)"
+  },
+  en: {
+    services_title: "Services",
+    service_avia_tag: "✈️ Flight Tickets",
+    service_avia_title: "Best flight options",
+    service_avia_desc: "Best price/time combinations",
+    service_visa_tag: "🛂 Visa",
+    service_visa_title: "Documents & guidance",
+    service_visa_desc: "Help with forms and required documents",
+    service_tour_tag: "🏨 Tours",
+    service_tour_title: "Packages",
+    service_tour_desc: "Ticket + hotel + transfer + guide (optional)"
+  }
+};
+
+function changeLanguage(lang) {
+  localStorage.setItem("lang", lang);
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    el.innerText = translations[lang][key];
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("lang") || "uz";
+  changeLanguage(savedLang);
+});
+</script>
