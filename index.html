@@ -143,11 +143,11 @@ background:rgba(255,255,255,.04);
       </div>
 
       <nav>
-        <a href="#xizmatlar">Xizmatlar</a>
-        <a href="#yonalish">3 ta yo‘nalish</a>
-        <a href="#narxlar">Narxlar</a>
-        <a href="#bizhaqimizda">Biz haqimizda</a>
-        <a href="#aloqa">Aloqa</a>
+<a href="#xizmatlar" data-i18n="services">Xizmatlar</a>
+<a href="#yonalish" data-i18n="directions">3 ta yo‘nalish</a>
+<a href="#narxlar" data-i18n="prices">Narxlar</a>
+<a href="#bizhaqimizda" data-i18n="about">Biz haqimizda</a>
+<a href="#aloqa" data-i18n="contact">Aloqa</a>
       </nav>
       <div class="lang-switch">
   <button id="btn-uz">UZ</button>
@@ -157,51 +157,69 @@ background:rgba(255,255,255,.04);
 
     <section class="hero" id="home">
       <div class="card">
-        <div class="pill">✈️ Sayohatni birga rejalashtiramiz • Ishonchli xizmat</div>
-        <h1 class="title">Viza, chipta va tur — hammasi bitta joyda</h1>
-        <p class="muted">
-          Biz siz uchun eng qulay yo‘nalishlarni tanlaymiz: aviachiptalar, mehmonxona, viza hujjatlari va tayyor turlar.
-          24/7 maslahat.
-        </p>
+        <div class="pill" data-i18n="hero_pill">
+✈️ Sayohatni birga rejalashtiramiz • Ishonchli xizmat
+</div>
+<h1 class="title" data-i18n="hero_title">
+Viza, chipta va tur — hammasi bitta joyda
+</h1>
+        <p class="muted" data-i18n="hero_text">
+  Biz siz uchun eng qulay yo‘nalishlarni tanlaymiz: aviachiptalar, mehmonxona, viza hujjatlari va tayyor turlar.
+  24/7 maslahat.
+</p>
 
         <div class="cta">
-          <a class="btn primary" href="#aloqa">📩 Buyurtma qoldirish</a>
-          <a class="btn" href="#yonalish">🧭 Yo‘nalishlarni ko‘rish</a>
-        </div>
-
+         <a class="btn primary" href="#aloqa" data-i18n="btn_order">📩 Buyurtma qoldirish</a>
+         <a class="btn" href="#yonalish" data-i18n="btn_view">🧭 Yo‘nalishlarni ko‘rish</a>
         <div class="kpi">
-          <span>✅ Tez javob</span>
-          <span>✅ Halol narx</span>
-          <span>✅ Kafolatli qo‘llab-quvvatlash</span>
+          <span data-i18n="kpi_fast">✅ Tez javob</span>
+          <span data-i18n="kpi_price">✅ Halol narx</span>
+          <span data-i18n="kpi_support">✅ Kafolatli qo‘llab-quvvatlash</span>
         </div>
       </div>
 
       <div class="card">
-        <h2 style="margin:0 0 10px">Tezkor ma’lumot</h2>
-        <div class="small">🧾 Xizmatlar: Kirish / Chiqish / Ichki</div>
-        <div class="small" style="margin-top:8px">📌 Ish vaqti: 09:00–21:00 (har kuni)</div>
-        <div class="small" style="margin-top:8px">📞 Call center: +998 90 000 00 00</div>
-        <div class="small" style="margin-top:8px">💬 Telegram: @weteachtravel</div>
+        <h2 style="margin:0 0 10px" data-i18n="quick_info">Tezkor ma’lumot</h2>
+        <div class="small" data-i18n="quick_services">🧾 Xizmatlar: Kirish / Chiqish / Ichki</div>
+        <div class="small" style="margin-top:8px" data-i18n="quick_hours">📌 Ish vaqti: 09:00–21:00 (har kuni)</div>
+        <div class="small" style="margin-top:8px" data-i18n="quick_call">📞 Call center: +998 95481 00 00</div>
+        <div class="small" style="margin-top:8px" data-i18n="quick_tg">💬 Telegram: @weteachtravel</div>
       </div>
     </section>
 
-   <section class="services" id="xizmatlar">
-      <h2>Xizmatlar</h2>
-      <div class="grid3">
-        <div class="card service avia">
-          <div class="tag">✈️ Aviachipta</div>
-          <div style="font-weight:800">Eng qulay reyslar</div>
-          <p class="muted">Narx/vaqt bo‘yicha eng yaxshi variantlarni topamiz.</p>
-        </div>
-        <div class="card service visa">
-          <div class="tag">🛂 Viza</div>
-          <div style="font-weight:800">Hujjat va yo‘l-yo‘riq</div>
-          <p class="muted">Anketa, ro‘yxat va hujjatlar bo‘yicha yordam.</p>
-        </div>
-        <div class="card service turlar">
-          <div class="tag">🏨 Turlar</div>
-          <div style="font-weight:800">Paketlar</div>
-          <p class="muted">Chipta + hotel + transfer + gid (kerak bo‘lsa).</p>
+   <h2 data-i18n="services_title">Xizmatlar</h2>
+<div class="grid3">
+
+  <div class="card service avia">
+    <div class="tag" data-i18n="service_avia_tag">✈️ Aviachiptа</div>
+    <div style="font-weight:800" data-i18n="service_avia_title">
+      Eng qulay reyslar
+    </div>
+    <p class="muted" data-i18n="service_avia_desc">
+      Narx/vaqt bo‘yicha eng yaxshi variantlar
+    </p>
+  </div>
+  <div class="card service visa">
+    <div class="tag" data-i18n="service_visa_tag">🛂 Viza</div>
+    <div style="font-weight:800" data-i18n="service_visa_title">
+      Hujjat va yo‘l-yo‘riq
+    </div>
+    <p class="muted" data-i18n="service_visa_desc">
+      Anketa, ro‘yxat va hujjatlar bo‘yicha yordam
+    </p>
+  </div>
+
+  <div class="card service turlar">
+    <div class="tag" data-i18n="service_tour_tag">🏨 Turlar</div>
+    <div style="font-weight:800" data-i18n="service_tour_title">
+      Paketlar
+    </div>
+    <p class="muted" data-i18n="service_tour_desc">
+      Chipta + hotel + transfer + gid (kerak bo‘lsa)
+    </p>
+  </div>
+
+</div>
         </div>
       </div>
       <div class="tour-grid">
