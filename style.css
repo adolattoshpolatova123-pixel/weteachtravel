@@ -1,3 +1,4 @@
+🍀, [3/1/2026 12:33 PM]
 /* RESET */
 *{ margin:0; padding:0; box-sizing:border-box; }
 
@@ -11,7 +12,9 @@ body{
 /* Sarlavha (agar header bo'lsa) */
 h1,h2,h3{ font-weight: 700; }
 
-/* CARD umumiy */
+/* =========================
+   CARD umumiy (TUR PAKETLAR UCHUN)
+   ========================= */
 .card{
   position: relative;
   height: 280px;
@@ -28,7 +31,7 @@ h1,h2,h3{ font-weight: 700; }
   transform: translateZ(0);
 }
 
-/* Har bir kartaga rasm + gradient (rasm ko‘rinishi uchun eng ishonchli usul) */
+/* Har bir kartaga rasm + gradient (tur paketlar) */
 .card.turkey{
   background-image:
     linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.65)),
@@ -99,51 +102,32 @@ h1,h2,h3{ font-weight: 700; }
   .card{ height: 260px; }
   .overlay h3{ font-size: 22px; }
 }
-/* Background rasmlar */
 
-.card {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+/* =========================
+   Background rasmlar (incoming/outgoing/domestic)
+   (sizdagi kod qoladi, faqat GLOBAL buzuvchi joy cheklanadi)
+   ========================= */
 
-.incoming {
-    background-image: url("Buxoro.jpg");
-}
+.incoming { background-image: url("Buxoro.jpg"); }
+.outgoing { background-image: url("Parij.jpg"); }
+.domestic { background-image: url("Xiva.jpg"); }
 
-.outgoing {
-    background-image: url("Parij.jpg");
-}
-
-.domestic {
-    background-image: url("Xiva.jpg");
-}
-/* ===== RASM CHIQISHI UCHUN 100% FIX ===== */
-
-.card{
-  position: relative;
-  overflow: hidden;
-
-  /* rasm sozlamalari */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* 3 ta card */
-.card.incoming{ background-image: url("Buxoro.jpg"); }
-.card.outgoing{ background-image: url("Parij.jpg"); }
-.card.domestic{ background-image: url("Xiva.jpg"); }
-/* ===== RASM CHIQISHI UCHUN 100% FIX ===== */
-/* RASMNI JOYLASH */
+/* RASMNI JOYLASH (faqat shu 3 ta uchun!) */
 .card.incoming { background-position: center 45% !important; }
 .card.outgoing { background-position: center 55% !important; }
 .card.domestic { background-position: center 50% !important; }
-.card{
+
+/* MUHIM: oldin sizda .card{ background-size:100% auto !important; } edi.
+   Bu hamma kartani buzadi. Shuni faqat shu 3 taga chekladim. */
+.card.incoming,
+.card.outgoing,
+.card.domestic{
   background-size: 100% auto !important;
 }
-/* ===== HERO ORQASIGA SAMALYOT ===== */
 
+/* =========================
+   HERO ORQASIGA SAMALYOT
+   ========================= */
 .hero{
   position: relative;
   padding: 80px 24px;
@@ -167,13 +151,19 @@ h1,h2,h3{ font-weight: 700; }
   position: relative;
   z-index: 2;
 }
+
+/* =========================
+   XIZMATLAR (FAQAT #xizmatlar ichida)
+   Bu joy TUR cardlarni buzmaydi!
+   ========================= */
+
 .services {
   display: flex;
   gap: 20px;
 }
 
-/* Umumiy card */
-.card {
+/* faqat xizmatlar kartasi */
+#xizmatlar .grid3 .card{
   height: 250px;
   border-radius: 20px;
   overflow: hidden;
@@ -182,14 +172,18 @@ h1,h2,h3{ font-weight: 700; }
   justify-content: center;
   padding: 20px;
   color: white;
+
+  /* xizmatlar rasm sozlamasi */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
   position: relative;
+  margin: 0; /* tur carddagi margin ta'sir qilmasin */
 }
 
-/* Qoramtir overlay */
-.card::before {
+/* xizmatlar uchun overlay */
+#xizmatlar .grid3 .card::before{
   content: "";
   position: absolute;
   inset: 0;
@@ -197,25 +191,14 @@ h1,h2,h3{ font-weight: 700; }
   border-radius: 20px;
 }
 
-/* Matn ustida tursin */
-.card * {
+/* xizmatlar matni ustida tursin */
+#xizmatlar .grid3 .card *{
   position: relative;
   z-index: 2;
 }
-.grid3 .card.avia { background-image: url("Aviachipta.jpg"); }
-.grid3 .card.visa { background-image: url("Visa.jpg"); }
-.grid3 .card.turlar { background-image: url("Turlar.jpg"); }
-/* ===== TUR PAKET KARTALARINI AVVALGI HOLATGA QAYTARISH ===== */
 
-.card:not(.service){
-  height: auto !important;
-  padding: 0 !important;
-  display: block !important;
-  color: inherit !important;
-}
-
-/* Overlay olib tashlash */
-.card:not(.service)::before,
-.card:not(.service)::after{
-  content: none !important;
-}
+🍀, [3/1/2026 12:33 PM]
+/* xizmatlar rasmlari */
+#xizmatlar .grid3 .card.avia  { background-image: url("Aviachipta.jpg"); }
+#xizmatlar .grid3 .card.visa  { background-image: url("Visa.jpg"); }
+#xizmatlar .grid3 .card.turlar{ background-image: url("Turlar.jpg"); }
