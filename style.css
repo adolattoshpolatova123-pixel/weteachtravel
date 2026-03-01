@@ -171,45 +171,53 @@ h1,h2,h3{ font-weight: 700; }
   display: flex;
   gap: 20px;
 }
-
-.service-card {
-  width: 300px;
-  height: 200px;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  background-size: cover;
-  background-position: center;
+.card {
   position: relative;
+  height: 250px;
+  border-radius: 20px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  color: white;
 }
 
-/* Qoramtir overlay (yozuv yaxshi ko‘rinishi uchun) */
-.service-card::before {
+/* Orqa fon rasmi */
+.card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
 }
 
-.service-card h3 {
+/* Qoramtir overlay */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1;
+}
+
+/* Matn ustida turishi uchun */
+.card * {
   position: relative;
   z-index: 2;
 }
 
 /* Rasmlar */
-.avia {
+.card:nth-child(1)::before {
   background-image: url("Aviachipta.jpg");
 }
 
-.visa {
+.card:nth-child(2)::before {
   background-image: url("Visa.jpg");
 }
 
-.turlar {
+.card:nth-child(3)::before {
   background-image: url("Turlar.jpg");
 }
