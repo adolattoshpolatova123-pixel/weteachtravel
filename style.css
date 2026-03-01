@@ -168,3 +168,66 @@ h1,h2,h3{ font-weight: 700; }
   position: relative;
   z-index: 2;
 }
+.price-lists{
+  margin-top: 30px;
+}
+
+.price-lists h2{
+  margin-bottom: 16px;
+}
+
+.plist{
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 18px;
+  margin: 16px 0;
+}
+
+.plist h3{
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.plist-head{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 14px;
+  font-weight: 700;
+  opacity: 0.9;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+
+.plist-rows{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.plist-rows li{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.plist-rows li:last-child{
+  border-bottom: none;
+}
+
+.plist-rows li span:last-child{
+  font-weight: 700;
+  white-space: nowrap;
+  opacity: 0.95;
+}
+
+@media (max-width: 520px){
+  .plist-head, .plist-rows li{
+    grid-template-columns: 1fr;
+  }
+  .plist-rows li span:last-child{
+    opacity: 0.9;
+  }
+}
