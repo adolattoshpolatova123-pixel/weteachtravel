@@ -99,3 +99,22 @@ h1,h2,h3{ font-weight: 700; }
   .card{ height: 260px; }
   .overlay h3{ font-size: 22px; }
 }
+/* Background rasmlar */
+
+.card {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.incoming {
+    background-image: url("buxoro.jpg");
+}
+
+.outgoing {
+    background-image: url("parij.jpg");
+}
+
+.domestic {
+    background-image: url("xiva.jpg");
+}
