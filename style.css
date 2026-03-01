@@ -142,3 +142,28 @@ h1,h2,h3{ font-weight: 700; }
 .card{
   background-size: 100% auto !important;
 }
+/* ===== HERO ORQASIGA SAMALYOT ===== */
+
+.hero{
+  position: relative;
+  padding: 80px 24px;
+  border-radius: 20px;
+
+  background-image: url("samalyot.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Qoraytirish */
+.hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.hero *{
+  position: relative;
+  z-index: 2;
+}
