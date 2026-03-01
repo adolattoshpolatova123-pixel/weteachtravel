@@ -202,16 +202,6 @@ h1,h2,h3{ font-weight: 700; }
   position: relative;
   z-index: 2;
 }
-
-/* Faqat 3 ta xizmat cardiga rasm */
-.card.avia {
-  background-image: url("Aviachipta.jpg");
-}
-
-.card.visa {
-  background-image: url("Visa.jpg");
-}
-
-.card.turlar {
-  background-image: url("Turlar.jpg");
-}
+.grid3 .card.avia { background-image: url("Aviachipta.jpg"); }
+.grid3 .card.visa { background-image: url("Visa.jpg"); }
+.grid3 .card.turlar { background-image: url("Turlar.jpg"); }
