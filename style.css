@@ -279,3 +279,46 @@ h1,h2,h3{ font-weight: 700; }
 .row strong{
   color: #7dd3fc;
 }
+/* ===== FAQAT XIZMATLAR UCHUN RASM ===== */
+
+#xizmatlar .card{
+  position: relative;
+  height: 260px;
+  border-radius: 20px;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Qoramtir overlay */
+#xizmatlar .card::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+#xizmatlar .card *{
+  position: relative;
+  z-index: 2;
+}
+
+/* 3 ta rasm */
+#xizmatlar .card.avia{
+  background-image: url("Aviachipta.jpg");
+}
+
+#xizmatlar .card.visa{
+  background-image: url("Visa.jpg");
+}
+
+#xizmatlar .card.turlar{
+  background-image: url("Turlar.jpg");
+}
