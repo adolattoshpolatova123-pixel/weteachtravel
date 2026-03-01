@@ -322,3 +322,22 @@ h1,h2,h3{ font-weight: 700; }
 #xizmatlar .card.turlar{
   background-image: url("Turlar.jpg");
 }
+.lang-switch{
+  display:flex;
+  gap:10px;
+  margin-left:20px;
+}
+
+.lang-switch button{
+  padding:6px 12px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+  color:white;
+  cursor:pointer;
+}
+
+.lang-switch button.active{
+  background:#4db8ff;
+  color:#000;
+}
