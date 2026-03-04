@@ -172,14 +172,15 @@ background:rgba(255,255,255,.04);
     </p>
 
         <div class="cta">
-         <a class="btn primary" href="#aloqa" data-i18n="btn_order">📩 Buyurtma qoldirish</a>
-         <a class="btn" href="#yonalish" data-i18n="btn_view">🧭 Yo‘nalishlarni ko‘rish</a>
-        <div class="kpi">
-          <span data-i18n="kpi_fast">✅ Tez javob</span>
-          <span data-i18n="kpi_price">✅ Halol narx</span>
-          <span data-i18n="kpi_support">✅ Kafolatli qo‘llab-quvvatlash</span>
-        </div>
-      </div>
+  <a class="btn primary" href="#aloqa" data-i18n="btn_order">📩 Buyurtma qoldirish</a>
+  <a class="btn" href="#yonalish" data-i18n="btn_view">🧭 Yo‘nalishlarni ko‘rish</a>
+</div>
+
+<div class="kpi">
+  <span data-i18n="kpi_fast">✅ Tez javob</span>
+  <span data-i18n="kpi_price">✅ Halol narx</span>
+  <span data-i18n="kpi_support">✅ Kafolatli qo‘llab-quvvatlash</span>
+</div>
 
       <div class="card">
         <h2 style="margin:0 0 10px" data-i18n="quick_info">Tezkor ma’lumot</h2>
@@ -222,7 +223,6 @@ background:rgba(255,255,255,.04);
     </p>
   </div>
 
-</div>
         </div>
       </div>
       <div class="tour-grid">
@@ -283,13 +283,16 @@ background:rgba(255,255,255,.04);
         </div>
 
        <div class="card domestic">
-          <div class="tag">🟨 Ichki (Domestic)</div>
-          <div style="font-weight:900;font-size:18px">O‘zbekiston ichida turlar</div>
-          <p class="muted">
-            Samarqand, Buxoro, Xiva, Farg‘ona: 1–3 kunlik sayohatlar, transport + gid.
-          </p>
-          <a class="btn primary" href="#aloqa">Bron qilish</a>
-        </div>
+  <div class="tag">🟨 Ichki (Domestic)</div>
+  <div style="font-weight:900;font-size:18px">O‘zbekiston ichida turlar</div>
+  <p class="muted">
+    Samarqand, Buxoro, Xiva, Farg‘ona: 1–3 kunlik sayohatlar, transport + gid.
+  </p>
+  <a class="btn primary" href="#aloqa">Bron qilish</a>
+</div>
+
+</div>   
+</section>
       
     </section>
    <section id="narxlar" class="narxlar">
@@ -377,7 +380,7 @@ background:rgba(255,255,255,.04);
 
   </div>
 </section>
-<section id="about" class="about-section">
+<section id="bizhaqimizda" class="about-section">
   <div class="container">
     <h2 data-i18n="about_title">Biz haqimizda</h2>
     
@@ -439,10 +442,34 @@ background:rgba(255,255,255,.04);
 <script>
 document.getElementById("y").textContent = new Date().getFullYear();
 </script>
-
 <script>
 const translations = {
   uz: {
+    // NAV
+    services: "Xizmatlar",
+    directions: "3 ta yo‘nalish",
+    prices: "Narxlar",
+    about: "Biz haqimizda",
+    contact: "Aloqa",
+
+    // HERO
+    hero_pill: "✈️ Sayohatni birga rejalashtiramiz • Ishonchli xizmat",
+    hero_title: "Viza, chipta va tur — hammasi bitta joyda",
+    hero_text: "Biz siz uchun eng qulay yo‘nalishlarni tanlaymiz: aviachiptalar, mehmonxona, viza hujjatlari va tayyor turlar. 24/7 maslahat.",
+    btn_order: "📩 Buyurtma qoldirish",
+    btn_view: "🧭 Yo‘nalishlarni ko‘rish",
+    kpi_fast: "✅ Tez javob",
+    kpi_price: "✅ Halol narx",
+    kpi_support: "✅ Kafolatli qo‘llab-quvvatlash",
+
+    // QUICK INFO
+    quick_info: "Tezkor ma’lumot",
+    quick_services: "🧾 Xizmatlar: Kirish / Chiqish / Ichki",
+    quick_hours: "📌 Ish vaqti: 09:00–21:00 (har kuni)",
+    quick_call: "📞 Call center: +998 95481 00 00",
+    quick_tg: "💬 Telegram: @weteachtravel",
+
+    // SERVICES
     services_title: "Xizmatlar",
     service_avia_tag: "✈️ Aviachiptа",
     service_avia_title: "Eng qulay reyslar",
@@ -452,9 +479,40 @@ const translations = {
     service_visa_desc: "Anketa, ro‘yxat va hujjatlar bo‘yicha yordam",
     service_tour_tag: "🏨 Turlar",
     service_tour_title: "Paketlar",
-    service_tour_desc: "Chipta + hotel + transfer + gid (kerak bo‘lsa)"
+    service_tour_desc: "Chipta + hotel + transfer + gid (kerak bo‘lsa)",
+
+    // ABOUT
+    about_title: "Biz haqimizda",
+    about_text: "We Teach Travel — sizning ishonchli sayohat hamkoringiz. Biz aviachiptalar, vizalar va tur paketlarini qulay, tezkor va ishonchli tarzda taqdim etamiz. Har bir mijozga individual yondashuv asosida xizmat ko‘rsatamiz va sayohatingizni yanada qulay qilishga yordam beramiz.",
+    about_support: "Doimiy qo‘llab-quvvatlash"
   },
+
   en: {
+    // NAV
+    services: "Services",
+    directions: "3 directions",
+    prices: "Prices",
+    about: "About",
+    contact: "Contact",
+
+    // HERO
+    hero_pill: "✈️ We plan your trip together • Trusted service",
+    hero_title: "Visa, tickets and tours — all in one place",
+    hero_text: "We help you choose the best options: flight tickets, hotels, visa documents, and ready-made tours. 24/7 consultation.",
+    btn_order: "📩 Leave a request",
+    btn_view: "🧭 View directions",
+    kpi_fast: "✅ Fast response",
+    kpi_price: "✅ Fair pricing",
+    kpi_support: "✅ Guaranteed support",
+
+    // QUICK INFO
+    quick_info: "Quick info",
+    quick_services: "🧾 Services: Inbound / Outbound / Domestic",
+    quick_hours: "📌 Working hours: 09:00–21:00 (daily)",
+    quick_call: "📞 Call center: +998 95481 00 00",
+    quick_tg: "💬 Telegram: @weteachtravel",
+
+    // SERVICES
     services_title: "Services",
     service_avia_tag: "✈️ Flight Tickets",
     service_avia_title: "Best flight options",
@@ -464,7 +522,12 @@ const translations = {
     service_visa_desc: "Help with forms and required documents",
     service_tour_tag: "🏨 Tours",
     service_tour_title: "Packages",
-    service_tour_desc: "Ticket + hotel + transfer + guide (optional)"
+    service_tour_desc: "Ticket + hotel + transfer + guide (optional)",
+
+    // ABOUT
+    about_title: "About us",
+    about_text: "We Teach Travel is your trusted travel partner. We provide flight tickets, visas, and tour packages quickly and conveniently. We offer personalized service and support to make your trip smooth and comfortable.",
+    about_support: "24/7 Support"
   }
 };
 
@@ -482,12 +545,15 @@ function changeLanguage(lang) {
     }
   });
 }
-
 document.addEventListener("DOMContentLoaded", () => {
+
   const savedLang = localStorage.getItem("lang") || "uz";
   changeLanguage(savedLang);
+
+  const uzBtn = document.getElementById("lang-uz");
+  const enBtn = document.getElementById("lang-en");
+
+  if (uzBtn) uzBtn.addEventListener("click", () => changeLanguage("uz"));
+  if (enBtn) enBtn.addEventListener("click", () => changeLanguage("en"));
 });
 </script>
-
-</body>
-</html>
