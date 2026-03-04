@@ -409,25 +409,36 @@ background:rgba(255,255,255,.04);
     📞 +998 996119999 <br>
     💬 Telegram: @weteachtravel
   </p>
-  <p class="small" style="margin-top:10px">Manzil: Toshkent shahri, Olmazor tumani Shifokorlar MFY Farobiy ko'chasi-494 uy</p>
+ <p class="small" style="margin-top:10px" data-i18n="address">
+Manzil: Toshkent shahri, Olmazor tumani Shifokorlar MFY Farobiy ko'chasi-494 uy
+</p>
 </div>
 
 <div class="card form">
-  <div style="font-weight:900">So‘rov qoldiring</div>
-  <p class="small">Bu forma demo. Xohlasa keyin Telegram/WhatsApp link qilib beramiz.</p>
+  <div style="font-weight:900" data-i18n="request_title">So‘rov qoldiring</div>
+
+  <p class="small" data-i18n="request_text">
+  Bu forma demo. Xohlasa keyin Telegram/WhatsApp link qilib beramiz.
+  </p>
+
   <div style="margin-top:10px">
-    <input placeholder="Ism" />
+    <input placeholder="Ism" data-i18n-placeholder="name"/>
   </div>
+
   <div style="margin-top:10px">
-    <input placeholder="Telefon" />
+    <input placeholder="Telefon" data-i18n-placeholder="phone"/>
   </div>
+
   <div style="margin-top:10px">
-    <textarea placeholder="Qaysi yo‘nalish? (Kirish turizmi / Yuborish / Ichki) va sanalar..."></textarea>
+    <textarea placeholder="Qaysi yo‘nalish? (Kirish turizmi / Yuborish / Ichki) va sanalar..." 
+    data-i18n-placeholder="message"></textarea>
   </div>
+
   <div style="margin-top:10px">
-    <button class="btn primary" type="button">Yuborish</button>
+    <button class="btn primary" type="button" data-i18n="send_btn">
+      Yuborish
+    </button>
   </div>
-</div>
 </div>
 </section>
 
