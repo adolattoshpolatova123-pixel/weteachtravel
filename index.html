@@ -397,47 +397,46 @@ Viza, chipta va tur — hammasi bitta joyda
     <section class="sec" id="aloqa">
       <h2>Aloqa</h2>
       <div class="row">
-        <div class="card">
-          <div style="font-weight:900">Call Center</div>
-          <p class="muted" style="margin-top:8px; margin-bottom:0">
-            📞 +998 954810000 <br>
-            📞 +998 996119999 <br>
-            💬 Telegram: @weteachtravel
-          </p>
-          <p class="small" style="margin-top:10px">Manzil: Toshkent shahri, Olmazor tumani Shifokorlar MFY Farobiy ko'chasi-494 uy</p>
-        </div>
+       <div class="card">
+  <div style="font-weight:900">Call Center</div>
+  <p class="muted" style="margin-top:8px; margin-bottom:0">
+    📞 +998 954810000 <br>
+    📞 +998 996119999 <br>
+    💬 Telegram: @weteachtravel
+  </p>
+  <p class="small" style="margin-top:10px">Manzil: Toshkent shahri, Olmazor tumani Shifokorlar MFY Farobiy ko'chasi-494 uy</p>
+</div>
 
-        <div class="card form">
-          <div style="font-weight:900">So‘rov qoldiring</div>
-          <p class="small">Bu forma demo. Xohlasa keyin Telegram/WhatsApp link qilib beramiz.</p>
-          <div style="margin-top:10px">
-            <input placeholder="Ism" />
-          </div>
-          <div style="margin-top:10px">
-            <input placeholder="Telefon" />
-          </div>
-          <div style="margin-top:10px">
-            <textarea placeholder="Qaysi yo‘nalish? (Kirish turizmi / Yuborish / Ichki) va sanalar..."></textarea>
-          </div>
-          <div style="margin-top:10px">
-            <button class="btn primary" type="button">Yuborish</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div>© <span id="y"></span> We Teach Travel</div>
-      <div class="small">GitHub Pages’da ishlaydi • index.html</div>
-    </footer>
-
+<div class="card form">
+  <div style="font-weight:900">So‘rov qoldiring</div>
+  <p class="small">Bu forma demo. Xohlasa keyin Telegram/WhatsApp link qilib beramiz.</p>
+  <div style="margin-top:10px">
+    <input placeholder="Ism" />
   </div>
+  <div style="margin-top:10px">
+    <input placeholder="Telefon" />
+  </div>
+  <div style="margin-top:10px">
+    <textarea placeholder="Qaysi yo‘nalish? (Kirish turizmi / Yuborish / Ichki) va sanalar..."></textarea>
+  </div>
+  <div style="margin-top:10px">
+    <button class="btn primary" type="button">Yuborish</button>
+  </div>
+</div>
+</div>
+</section>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+<footer>
+  <div>© <span id="y"></span> We Teach Travel</div>
+  <div class="small">GitHub Pages’da ishlaydi • index.html</div>
+</footer>
+
+</div>
+
+<script>
+document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+
 <script>
 const translations = {
   uz: {
@@ -468,20 +467,6 @@ const translations = {
 
 function changeLanguage(lang) {
   localStorage.setItem("lang", lang);
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.getAttribute("data-i18n");
-    el.innerText = translations[lang][key];
-  });
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const savedLang = localStorage.getItem("lang") || "uz";
-  changeLanguage(savedLang);
-});
-</script>
-<script>
-function changeLanguage(lang) {
-  localStorage.setItem("lang", lang);
 
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
@@ -490,7 +475,6 @@ function changeLanguage(lang) {
     if (value !== undefined) {
       el.innerText = value;
     } else {
-      // topilmagan keylarni ko‘rsatib turadi (DevTools Console’da)
       console.warn("Missing translation:", lang, key);
     }
   });
@@ -501,3 +485,6 @@ document.addEventListener("DOMContentLoaded", () => {
   changeLanguage(savedLang);
 });
 </script>
+
+</body>
+</html>
