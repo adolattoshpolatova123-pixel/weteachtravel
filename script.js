@@ -5,4 +5,6 @@ document.getElementById("lang-uz").onclick = function () {
 document.getElementById("lang-en").onclick = function () {
   alert("EN ishladi");
 };
+document.getElementById("lang-uz").addEventListener("click", () => applyLanguage("uz"));
+document.getElementById("lang-en").addEventListener("click", () => applyLanguage("en"));
 
