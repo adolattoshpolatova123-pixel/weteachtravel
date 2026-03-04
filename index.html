@@ -435,9 +435,7 @@ Manzil: Toshkent shahri, Olmazor tumani Shifokorlar MFY Farobiy ko'chasi-494 uy
   </div>
 
   <div style="margin-top:10px">
-    <button class="btn primary" type="button" data-i18n="send_btn">
-      Yuborish
-    </button>
+   <button class="btn primary" type="button" onclick="sendWhatsApp()">Yuborish</button>
   </div>
 </div>
 </section>
@@ -451,6 +449,24 @@ Manzil: Toshkent shahri, Olmazor tumani Shifokorlar MFY Farobiy ko'chasi-494 uy
 
 <script>
 document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+  <script>
+function sendWhatsApp(){
+
+let ism = document.querySelector('input[placeholder="Ism"]').value;
+let tel = document.querySelector('input[placeholder="Telefon"]').value;
+let xabar = document.querySelector('textarea').value;
+
+let text = "Yangi so'rov:%0A"
++ "Ism: " + ism + "%0A"
++ "Telefon: " + tel + "%0A"
++ "Xabar: " + xabar;
+
+let url = "https://wa.me/998996119999?text=" + text;
+
+window.open(url);
+
+}
 </script>
 <script>
 const translations = {
