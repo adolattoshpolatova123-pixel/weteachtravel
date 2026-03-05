@@ -376,3 +376,8 @@ body{
 .contact-card{
   padding-bottom: 40px;   /* knopka kesilmasin */
 }
+/* Contact form joyi tugma ko‘rinishi uchun */
+.contact-card, .card, .right, .panel, .form-box {
+  overflow-y: auto;
+  padding-bottom: 60px;
+}
