@@ -381,3 +381,12 @@ body{
   overflow-y: auto;
   padding-bottom: 60px;
 }
+/* Textarea ichidagi yozuv (placeholder) kichrayishi */
+textarea{
+  font-size: 14px;
+}
+
+/* Placeholder matnini alohida kichraytirish */
+textarea::placeholder{
+  font-size: 12px;
+}
