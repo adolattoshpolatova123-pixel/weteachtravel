@@ -390,3 +390,24 @@ textarea{
 textarea::placeholder{
   font-size: 12px;
 }
+.pay-section{
+  text-align:center;
+  margin-top:40px;
+}
+
+.pay-btn{
+  background: linear-gradient(135deg,#2b6df3,#00c6ff);
+  color:white;
+  border:none;
+  padding:14px 32px;
+  font-size:18px;
+  border-radius:30px;
+  cursor:pointer;
+  transition:0.3s;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.pay-btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
